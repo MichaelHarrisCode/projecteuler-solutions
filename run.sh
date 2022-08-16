@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# This script is used to test solutions
+
 if [ $# -eq "0" ]
 then
 	echo "error: Missing argument"
