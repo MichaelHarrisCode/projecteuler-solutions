@@ -10,7 +10,7 @@ else
 	input="$1"
 	output="${input%.c}.out"
 
-	gcc $input -o $output
+	gcc $input -o $output -lm
 	./$output
 	rm $output
 fi
