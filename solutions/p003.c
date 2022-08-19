@@ -12,16 +12,19 @@
 int main()
 {
 	long int value = 600851475143;
+	long int largest;
 
 	for (int i = 3; i <= sqrt(value); i += 2) {
 		while (value % i == 0) {
-			printf("%d ", i);
 			value /= i;
+			largest = i;
 		}
 	}
 
-	if (value > 2)
-		printf("%ld ", value);
+	if (value > 2 && value > largest)
+		largest = value;
+
+	printf("%ld\n", largest);
 
 	return 0;
 }
