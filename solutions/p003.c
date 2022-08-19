@@ -17,12 +17,13 @@ int main()
 	for (int i = 3; i <= sqrt(value); i += 2) {
 		while (value % i == 0) {
 			value /= i;
-			largest = i;
 		}
-	}
 
-	if (value > 2 && value > largest)
-		largest = value;
+		if (value > 2)
+			largest = value;
+		else
+			largest = i;
+	}
 
 	printf("%ld\n", largest);
 
