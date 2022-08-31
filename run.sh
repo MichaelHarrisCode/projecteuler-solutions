@@ -11,6 +11,6 @@ else
 	output="${input%.c}.out"
 
 	gcc $input -o $output -lm
-	./$output
+	time ./$output
 	rm $output
 fi
